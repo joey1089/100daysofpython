@@ -12,6 +12,7 @@ symbols = string.punctuation
 print("Letters : ",letters)
 print("Numbers : ",numbers)
 print("Symbols : ",symbols)
+all_combine = letters+numbers+symbols
 
 print("Welcome to the PyPassword Generator!")
 nr_letters= int(input("How many letters would you like in your password?\n")) 
@@ -24,3 +25,10 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+while nr_letters != 0:
+    print("\n Generating Password! ...")
+    print(all_combine)
+    break
+
+    
