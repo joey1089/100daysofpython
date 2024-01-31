@@ -37,12 +37,40 @@ total_char = nr_letters + nr_numbers + nr_symbols
 
 while total_char > 15:
     print("\n Generating Password! ...")
-    rand_pass = []
+    # Generate random letters
+    pass_list = []
     for letter in range(0,nr_letters):
-        random_char = random.sample(letters, k=1)
-        rand_pass += random_char
-    print("Random letters selected : ", rand_pass)
+        pass_list = random.sample(letters, k=8)       
+    print("Random letters selected : ", pass_list, len(pass_list))
+    # Generate random numbers
+ 
+    for number in range(0,nr_numbers):
+        pass_list += random.sample(numbers, k= 4)
+    print("Random selected numbers : ", pass_list, len(pass_list))
+    # Generate random symbols
+    rand_symbols = []
+    for sym in range(0, nr_symbols):
+        pass_list += random.sample(symbols,k=4)
+    print("Random Selected symbols : ", pass_list, len(pass_list))
+
+    # Generate password
+    print("\n Before Random shuffle : ", pass_list)
+    pass_rand = random.shuffle(pass_list)
+    print("\n After Random : ", pass_list)
+
+    passwords = ""
+    for char in pass_list:
+        passwords += char
+    
+    print("final Generated password : ", passwords)
+
+
+
+  
+    
+
     break
+
 else:
     print("Choose more than 15 characters to create password")
 
