@@ -13,11 +13,20 @@ print("Letters : ",letters)
 print("Numbers : ",numbers)
 print("Symbols : ",symbols)
 all_combine = letters+numbers+symbols
+# print("All combined together values : ",all_combine)
+
 
 print("Welcome to the PyPassword Generator!")
-nr_letters= int(input("How many letters would you like in your password?\n")) 
-nr_symbols = int(input(f"How many symbols would you like?\n"))
-nr_numbers = int(input(f"How many numbers would you like?\n"))
+print("Create a strong password that has more than 15 characters!!!")
+# nr_letters= int(input("How many letters would you like in your password?\n")) 
+# nr_symbols = int(input(f"How many symbols would you like?\n"))
+# nr_numbers = int(input(f"How many numbers would you like?\n"))
+
+#test values
+nr_letters = 8
+nr_numbers = 4 
+nr_symbols = 4
+total_char = nr_letters + nr_numbers + nr_symbols
 
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
@@ -26,9 +35,15 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-while nr_letters != 0:
+while total_char > 15:
     print("\n Generating Password! ...")
-    print(all_combine)
+    rand_pass = []
+    for letter in range(0,nr_letters):
+        random_char = random.sample(letters, k=1)
+        rand_pass += random_char
+    print("Random letters selected : ", rand_pass)
     break
+else:
+    print("Choose more than 15 characters to create password")
 
     
