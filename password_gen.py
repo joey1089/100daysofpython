@@ -11,13 +11,9 @@ TOTAL_CHARS = 17 # Constant
 print("Create Strong Password using PyPassword Generator!")
 print(f"Create a strong password that has more than {TOTAL_CHARS} characters!!!")
 nr_letters= int(input("How many letters would you like in your password?\n")) 
-nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
+nr_symbols = int(input(f"How many symbols would you like?\n"))
 
-#test values
-# nr_letters = 10
-# nr_numbers = 4
-# nr_symbols = 3
 total_char = nr_letters + nr_numbers + nr_symbols
 
 #Eazy Level - Order not randomised:
@@ -52,7 +48,7 @@ while total_char > TOTAL_CHARS:
     #     print("Password generated has extra values")
 
     # Generate password
-    print("\n Before Random shuffle : ", pass_list, len(pass_list)) #len added to check if values, as expected!
+    print("\n Before Random shuffle : ", pass_list, len(pass_list)) #len() added to check if values, as expected!
     pass_rand = random.shuffle(pass_list)
     print("\n After Random : ", pass_list)
 

@@ -1,6 +1,15 @@
+# Using Functions to make it more efficient to Generate password.
+# Here trying to impliment another level of learning
 import random
 import string
-from password_gen import nr_letters,nr_numbers,nr_symbols,letters,numbers,symbols,total_char
+
+
+letters = string.ascii_letters
+symbols = string.punctuation
+TOTAL_CHARS = 17 # Constant
+
+print("Generate Strong Password with all Combinations!!!")
+
 
 #Generating Non Randomized Password.
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
