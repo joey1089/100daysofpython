@@ -1,6 +1,5 @@
 import random
 import string
-import password_gen
 from password_gen import nr_letters,nr_numbers,nr_symbols,letters,numbers,symbols,total_char
 
 #Generating Non Randomized Password.
