@@ -34,9 +34,43 @@ total_char = nr_letters + nr_numbers + nr_symbols
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 while total_char > 16:
-    print("\n Generating Password! ...")
+    print("Generating Password! ...")
     # Generate random letters
-       
+
+    pass_list = []
+    for letter in range(0,nr_letters):
+        pass_list = random.sample(letters, k=nr_letters)       
+    # print("Random letters selected : ", pass_list, len(pass_list))
+    # Generate random numbers
+    
+    pass_num = random.sample(range(0,10),k= nr_numbers)
+    # print("Random selected numbers : ", pass_num)
+    # print(pass_num)
+    for no in pass_num:
+        pass_list.append(str(no))
+    # print("\n New List :- ",pass_list)
+
+    # Generate random symbols
+
+    for sym in range(0, nr_symbols):
+        pass_list += random.choice(symbols)
+        # pass_list += random.sample(symbols,k=1)
+    # print("Random Selected symbols : ", pass_list, len(pass_list))
+
+    # check if total characters 
+    if total_char == len(pass_list):
+        print("\nTotal no of characters are the same!")
+    else:
+        print("Password generated has extra values")
+
+    # Generate password
+    print("\n Before Random shuffle : ", pass_list, len(pass_list))
+    pass_rand = random.shuffle(pass_list)
+    print("\n After Random : ", pass_list)
+
+    # print("Length of the password : ", len(passwords))
+    new_password = "".join(pass_list)
+    print("\n Your randomly generated password : ",new_password)
 
     break
 

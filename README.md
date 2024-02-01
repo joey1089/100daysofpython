@@ -1,2 +1,3 @@
-# 100daysofpython
-Python code building excerises with course from 100 days of python. I realized that I haven't added my past python code building excerises from the course.
+# 100daysofcode
+Python code building excerises with course from 100 days of code. I realized that I haven't added my past python code building excerises from the course.
+following lessons from https://www.udemy.com/course/100-days-of-code/
