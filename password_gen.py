@@ -52,7 +52,7 @@ while total_char > TOTAL_CHARS:
     #     print("Password generated has extra values")
 
     # Generate password
-    print("\n Before Random shuffle : ", pass_list, len(pass_list))
+    print("\n Before Random shuffle : ", pass_list, len(pass_list)) #len added to check if values, as expected!
     pass_rand = random.shuffle(pass_list)
     print("\n After Random : ", pass_list)
 
