@@ -1,9 +1,11 @@
 # Using Functions to make it more efficient to Generate password.
-# Here trying to impliment another level of learning
+# Here trying to impliment another level of learning.
+# Remove user choice, so code create fal
 import random
 import string
 
 
+# Declare all Constants 
 letters = string.ascii_letters
 symbols = string.punctuation
 TOTAL_CHARS = 17 # Constant
@@ -11,7 +13,7 @@ TOTAL_CHARS = 17 # Constant
 print("Generate Strong Password with all Combinations!!!")
 
 
-#Generating Non Randomized Password.
+#Generating Password Phrases.
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 def password_not_random():
     '''Generating Non Randomized Password.'''

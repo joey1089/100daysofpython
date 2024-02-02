@@ -44,7 +44,7 @@ while total_char > TOTAL_CHARS:
         
 
     # check if total characters 
-    # if total_char == len(pass_list):
+    # if total_char == len(pass_list): #
     #     print("\nTotal no of characters are the same!")
     # else:
     #     print("Password generated has extra values")
