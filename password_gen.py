@@ -3,9 +3,8 @@ import random
 import string
 import os
 
-letters = string.ascii_letters
-# numbers = string.digits
-symbols = string.punctuation
+os.system('clear')
+
 TOTAL_CHARS = 17 # Constant
 
 print("Create Strong Password using PyPassword Generator!")
@@ -13,6 +12,9 @@ print(f"Create a strong password that has more than {TOTAL_CHARS} characters!!!"
 nr_letters= int(input("How many letters would you like in your password?\n")) 
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
+letters = string.ascii_letters
+# numbers = string.digits
+symbols = string.punctuation
 
 total_char = nr_letters + nr_numbers + nr_symbols
 
