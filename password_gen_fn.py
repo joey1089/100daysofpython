@@ -1,23 +1,36 @@
 # Using Functions to make it more efficient to Generate password.
 # Here trying to impliment another level of learning.
-# Remove user choice, so code create fal
 import random
 import string
+# from password_gen import nr_letters,nr_numbers,nr_symbols, total_char
+from wonderwords import RandomSentence
 
 
 # Declare all Constants 
 letters = string.ascii_letters
 symbols = string.punctuation
-TOTAL_CHARS = 17 # Constant
+TOTAL_CHARS = 20 # Constant caps
+userchoice = int(input(f"\n Want Strong Random password type '1' or want passphrases type '2' :-" ))
 
 print("Generate Strong Password with all Combinations!!!")
 
 
-#Generating Password Phrases.
-#e.g. 4 letter, 2 symbol, 2 number = JduE&!91
-def password_not_random():
-    '''Generating Non Randomized Password.'''
-    print("\n Generating Non Randomized Password.")
+#Generating Passpharse and randomize the caps on it
+
+def passphrase():
+    '''Generating a passphrase.'''   
+    s = RandomSentence() 
+    #https://wonderwords.readthedocs.io/en/latest/api_docs/random_sentence.html
+    # Get a random sentence with a subject, predicate, direct object and adjective
+    # s.sentence()
+    with_space_sentence = s.sentence()
+    print("\n Remember this Passpharse, also combine ur own sysmbols and numbers to it :- ", with_space_sentence)
+    rm_space_sentence = with_space_sentence.replace(".","").replace(" ","")
+        
+    # here join is used to convert to a lower and upper string at random.
+    rm_space_sentence = ''.join(random.choice((str.upper, str.lower))(char) for char in rm_space_sentence)
+    print("Removed Space and Randomized Caps on the Passpharse :- ",rm_space_sentence)
+
 
 
 #Generating Randomized Password.
@@ -59,3 +72,10 @@ def password_randomized():
     
     print("final Generated password : ", passwords)
     # print("Length of the password : ", len(passwords))
+
+if userchoice == 1:
+    print("Proceeding to create strong randomized password")
+    # password_randomized()
+else:
+    print("Proceeding to create a passphrase")
+    passphrase()
